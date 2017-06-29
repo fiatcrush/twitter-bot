@@ -6,8 +6,8 @@ This is a simple Twitter bot which keeps the conversation alive by perfroming tw
 
 You will need 
 
-*node.js
-*npm twit
+* node.js
+* npm twit
 
 You will need edit 3 locations below before you can use this bot.
 
