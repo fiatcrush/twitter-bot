@@ -1,7 +1,7 @@
 // *** SECTION 1 ***
 
 // Announce program start and get things initialized
-console.log("Twitter Bot is starting now")
+console.log("Twitter Bot Is Live")
 
 // We first require the Twit package and Authenticate to the Twitter API
 var Twit = require("twit");
@@ -20,7 +20,7 @@ function followed(event){
   console.log("Follow Event!")
   var name = event.source.name;
   var screenName = event.source.screen_name;
-  tweetIt("@" + screenName + " Hello there! What's your favourite cryptocurrency?"); // REQUIRED USER DATA
+  tweetIt("@" + screenName + " Thanks! What is your favourite cryptocurrency right now?"); // REQUIRED USER DATA
 }
 
 // This is the section that Tweets our response to the new follower
