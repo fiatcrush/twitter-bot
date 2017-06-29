@@ -9,9 +9,7 @@ You will need
 * node.js
 * npm twit
 
-You will need edit 3 locations below before you can use this bot.
-
-First you need to add your API key data for twitter in file config.js:
+You will need edit three locations as below before you can use this bot. First add your API key data for twitter in file config.js:
 
 ```
 module.exports = {
@@ -29,10 +27,10 @@ Then on line 23 add your reply tweet info:
 ```
 tweetIt("@" + screenName + " Hello there! What's your favourite cryptocurrency?"); // REQUIRED USER DATA
 ```
+
 And lastly on line 50 add your hastag or serach term(s), comma delimit if you want multiple:
 
 ```
 q: '#blockchain',  // REQUIRED USER DATA
 ```
 
-## What is Twitter-bot
