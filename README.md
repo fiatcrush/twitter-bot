@@ -1,13 +1,16 @@
 ## What is Twitter-bot
 
-This is a simple Twitter bot which keeps the conversation alive by perfroming two simple functions. Replying to new followers to engage in conversation and the second function is to retweet relevant industry specific topics. It uses node.js & npm-twit.
+This simple TWITTER @bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It uses **node.js & **npm-twit.
 
-## Installation 
+
+## Requirements 
 
 You will need 
 
 * node.js
-* npm twit
+* npm-twit
+
+## Installation 
 
 You will need edit three locations as below before you can use this bot. First add your API key data for twitter in file config.js:
 
@@ -28,7 +31,7 @@ Then on line 23 add your reply tweet info:
 tweetIt("@" + screenName + " Hello there! What's your favourite cryptocurrency?"); // REQUIRED USER DATA
 ```
 
-And lastly on line 50 add your hastag or serach term(s), comma delimit if you want multiple:
+And lastly on line 50 add your #hashtag or search term(s), comma delimited if using multiple:
 
 ```
 q: '#blockchain',  // REQUIRED USER DATA
