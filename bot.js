@@ -1,47 +1,53 @@
 // SECTION 1 ******************************
+
 // Announce program start and get things initialized
 console.log("Twitter Bot is starting now")
-// This Program Requires the abilities of Twit package
+
+// We first require the Twit package and Authenticate to the Twitter API
 var Twit = require("twit");
-// Authenticate with Twitter API
 var config = require("./config");
 var T = new Twit(config);
 
-//SECTION 2 ******************************
+// SECTION 2 ******************************
 // This whole section is the reply bot that says thanks to new followers!
-// Setup a user stream
+
+// Setup a user stream and monitor for when people follow us
 var stream = T.stream("user");
-// We monitor for when people follow us
 stream.on("follow", followed);
+
 // When they follow we prepare a response tweet
 function followed(event){
   console.log("Follow Event!")
   var name = event.source.name;
   var screenName = event.source.screen_name;
-  tweetIt("@" + screenName + "#FIATCRUSH salutes you! Tweet us your favourite cryptocurrency?");
+  tweetIt("@" + screenName + " Hello there! What's your favourite cryptocurrency?"); // REQUIRED USER DATA
 }
+
 // This is the section that Tweets our response to the new follower
 function tweetIt(txt) {
   var tweet = {
-    status: txt
+  status: txt
   }
+
 // Post to Twitter using Twitter API
   T.post('statuses/update', tweet, tweeted);
+
 // Manage the data returned
   function tweeted(err, data, response) {
     if (err) {
-      console.log("Something Went Wrong!");
-    } else {
+        console.log("Something Went Wrong!");
+        } else {
         console.log("It Worked");
         }
   }
 }
 
 // SECTION 3 **************************
+
 // Find latest tweet related to our favorite subject #blockchain
 var retweet = function() {
     var params = {
-        q: '#blockchain',  // REQUIRED
+        q: '#blockchain',  // REQUIRED USER DATA
         result_type: 'recent',
         lang: 'en'
     }
@@ -70,7 +76,12 @@ var retweet = function() {
         }
     });
 }
-// grab & retweet as soon as program is running...
+
+//SECTION 5
+
+// We don't want to spam the server so this section limits actions by time
+
+// Retweet onprogram start
 retweet();
-// retweet in every 10 minutes
+// Retweet in every 10 minutes
 setInterval(retweet, 600000);
