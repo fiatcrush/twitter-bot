@@ -1,4 +1,4 @@
-// SECTION 1 ******************************
+// *** SECTION 1 ***
 
 // Announce program start and get things initialized
 console.log("Twitter Bot is starting now")
@@ -8,7 +8,7 @@ var Twit = require("twit");
 var config = require("./config");
 var T = new Twit(config);
 
-// SECTION 2 ******************************
+// *** SECTION 2 ***
 // This whole section is the reply bot that says thanks to new followers!
 
 // Setup a user stream and monitor for when people follow us
@@ -42,7 +42,7 @@ function tweetIt(txt) {
   }
 }
 
-// SECTION 3 **************************
+// *** SECTION 3 ***
 
 // Find latest tweet related to our favorite subject #blockchain
 var retweet = function() {
@@ -77,11 +77,11 @@ var retweet = function() {
     });
 }
 
-//SECTION 5
+// *** SECTION 4 ***
 
 // We don't want to spam the server so this section limits actions by time
 
-// Retweet onprogram start
+// Retweet when program starts
 retweet();
-// Retweet in every 10 minutes
+// Retweet every 10 minutes
 setInterval(retweet, 600000);

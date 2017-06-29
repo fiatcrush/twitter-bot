@@ -1,6 +1,6 @@
 ## What is Twitter-bot
 
-This simple Twitter bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It uses **node.js** & **npm-twit**.
+This simple Twitter bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It uses **node.js** and **npm-twit**.
 
 
 ## Requirements 
@@ -14,7 +14,7 @@ You will need
 
 **You will need to edit three locations as below with your own data before use.**
 
-* 1. First add your API key data for twitter in file config.js:
+* First add your API key data for twitter in file config.js:
 
 ```
 module.exports = {
@@ -24,16 +24,15 @@ module.exports = {
   access_token_secret:  'your-keys-here',
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 }
-
 ```
 
-* 2. Then on line 23 add your reply tweet info:
+* Then on line 23 add your reply tweet info:
 
 ```
 tweetIt("@" + screenName + " Hello there! What's your favourite cryptocurrency?"); // REQUIRED USER DATA
 ```
 
-* 3. And lastly on line 50 add your #hashtag or search term(s), comma delimited if using multiple:
+* And lastly on line 50 add your #hashtag or search term(s), comma delimited if using multiple:
 
 ```
 q: '#blockchain',  // REQUIRED USER DATA
