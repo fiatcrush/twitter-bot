@@ -5,34 +5,20 @@ This simple Twitter bot keeps the conversation alive by performing 2 simple func
 
 ## Built With 
 
-You willBilt with need 
-
-
 * [NPMJS](https://www.npmjs.com/package/twit) - Twit-NPM
 * [NODEJS](https://nodejs.org/en/) - NodeJS
 
 ## Code Sample
 
-Thankyou to Daniel Shiffman for your assistance with writing this. 
+Thankyou to Daniel Shiffman for your assistance with writing this. Code sample below: 
 
 ```
-// *** SECTION 1 ***
-
-// Announce program start and get things initialized
-console.log("Twitter Bot Is Live")
-
-// We first require the Twit package and Authenticate to the Twitter API
-var Twit = require("twit");
-var config = require("./config");
-var T = new Twit(config);
-
 // *** SECTION 2 ***
-// This whole section is the reply bot that says thanks to new followers!
 
+// This section is the reply bot that says thanks to new followers!
 // Setup a user stream and monitor for when people follow us
 var stream = T.stream("user");
 stream.on("follow", followed);
-
 // When they follow we prepare a response tweet
 function followed(event){
   console.log("Follow Event!")
@@ -40,12 +26,11 @@ function followed(event){
   var screenName = event.source.screen_name;
   tweetIt("@" + screenName + " Thanks! What is your favourite cryptocurrency right now?"); // REQUIRED USER DATA
 }
-
 // This is the section that Tweets our response to the new follower
-function tweetIt(txt) {
+function tweetIt(txt){
   var tweet = {
   status: txt
-  }
+}
 ```
 
 ## Installation 
