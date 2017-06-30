@@ -3,18 +3,19 @@
 This simple Twitter bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It uses **node.js** and **npm-twit**.
 
 
-## Requirements 
+## Built With 
 
-You will need 
+You willBilt with need 
 
-> node.js
-> npm-twit
+
+* [NPMJS](https://www.npmjs.com/package/twit) - Twit-NPM
+* [NODEJS](https://nodejs.org/en/) - NodeJS
 
 ## Code Sample
 
 Thankyou to Daniel Shiffman for your assistance with writing this. 
 
-``
+```
 // *** SECTION 1 ***
 
 // Announce program start and get things initialized
@@ -45,7 +46,7 @@ function tweetIt(txt) {
   var tweet = {
   status: txt
   }
-``
+```
 
 ## Installation 
 
