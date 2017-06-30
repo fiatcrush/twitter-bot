@@ -1,6 +1,6 @@
 ## What is Twitter-Bot
 
-This simple Twitter bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It uses **node.js** and **npm-twit**.
+This simple Twitter bot keeps the conversation alive by performing 2 simple functions. It replies to new followers to engage them in conversation AND it retweets relevant industry specific topics. It is programmed in Javascript and uses **node.js** and **npm-twit**.
 
 
 ## Built With 
