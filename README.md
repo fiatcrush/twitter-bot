@@ -8,6 +8,7 @@ This simple Twitter bot keeps the conversation alive by performing 2 simple func
 * [NPMJS](https://www.npmjs.com/package/twit) - Twit-NPM
 * [NODEJS](https://nodejs.org/en/) - NodeJS
 
+
 ## Code Sample
 
 Thankyou to Daniel Shiffman for your assistance with writing this. Code sample below: 
@@ -32,6 +33,7 @@ function tweetIt(txt){
   status: txt
 }
 ```
+
 
 ## Installation 
 
