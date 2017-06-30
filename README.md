@@ -15,8 +15,8 @@ Thankyou to Daniel Shiffman for your assistance with writing this. Code sample b
 
 ```
 // *** SECTION 2 ***
-
 // This section is the reply bot that says thanks to new followers!
+
 // Setup a user stream and monitor for when people follow us
 var stream = T.stream("user");
 stream.on("follow", followed);
