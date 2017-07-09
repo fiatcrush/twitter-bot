@@ -40,7 +40,7 @@ function tweetIt(txt){
 **You will need to edit three locations as below with your own data before use.**
 
 
-* First extract the files to a directory of your choice, then in that directory at the command line type
+* First extract the files to a directory of your choice. From within that directory at the command line type:
 
 ```
 npm install
