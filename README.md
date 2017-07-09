@@ -39,7 +39,15 @@ function tweetIt(txt){
 
 **You will need to edit three locations as below with your own data before use.**
 
-* First add your API key data for twitter in file config.js:
+
+* First extract the files to a directory of your choice, then in that directory at the command line type
+
+```
+npm install
+
+```
+
+* Tthen add your API key data for twitter in file config.js:
 
 ```
 module.exports = {
